@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:overScrollMode="ifContentScrolls">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/introduction_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/capturing_help_text_1"
+            android:textColor="?colorOnSurfaceVariant"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/introduction_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/capturing_help_text_2"
+            android:textColor="?colorOnSurfaceVariant"
+            app:layout_constraintStart_toStartOf="@id/introduction_1"
+            app:layout_constraintTop_toBottomOf="@id/introduction_1" />
+
+        <TextView
+            android:id="@+id/introduction_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/capturing_help_text_3"
+            android:textColor="?colorOnSurfaceVariant"
+
+            app:layout_constraintStart_toStartOf="@id/introduction_2"
+            app:layout_constraintTop_toBottomOf="@id/introduction_2" />
+
+        <TextView
+            android:id="@+id/recording_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/capturing_help_start_stop_buttons_desc"
+            android:textColor="?colorOnSurfaceVariant"
+            app:layout_constraintBottom_toBottomOf="@id/start_recording_example_button"
+            app:layout_constraintStart_toEndOf="@id/stop_recording_example_button"
+            app:layout_constraintTop_toTopOf="@id/start_recording_example_button" />
+
+
+        <TextView
+            android:id="@+id/next_mode_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/capturing_help_next_button_desc"
+            android:textColor="?colorOnSurfaceVariant"
+            app:layout_constraintBottom_toBottomOf="@id/prev_mode_example_button"
+            app:layout_constraintStart_toStartOf="@id/recording_text"
+            app:layout_constraintTop_toTopOf="@id/prev_mode_example_button" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/start_recording_example_button"
+            style="?attr/floatingActionButtonSmallSecondaryStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/start_sound_capturing_button"
+            app:layout_constraintStart_toStartOf="@+id/introduction_3"
+            app:layout_constraintTop_toBottomOf="@id/introduction_3"
+            app:srcCompat="@drawable/baseline_fiber_manual_record_24" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/stop_recording_example_button"
+            style="?attr/floatingActionButtonSmallSecondaryStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/start_sound_capturing_button"
+            app:layout_constraintStart_toEndOf="@+id/start_recording_example_button"
+            app:layout_constraintTop_toBottomOf="@id/introduction_3"
+            app:srcCompat="@drawable/baseline_stop_24" />
+
+        <ImageButton
+            android:id="@+id/prev_mode_example_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end|center"
+            android:layout_margin="16dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/next_mode_button"
+            android:src="@drawable/baseline_keyboard_arrow_right_24"
+            app:layout_constraintStart_toStartOf="@+id/stop_recording_example_button"
+            app:layout_constraintTop_toBottomOf="@id/stop_recording_example_button"
+            app:tint="?colorOnBackground" />
+
+        <TextView
+            android:id="@+id/end_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/capturing_help_text_end"
+            android:textColor="?colorOnSurfaceVariant"
+            app:layout_constraintStart_toStartOf="@+id/start_recording_example_button"
+            app:layout_constraintTop_toBottomOf="@id/prev_mode_example_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
